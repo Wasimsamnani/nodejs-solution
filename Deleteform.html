@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+      .maindiv,.maindiv2{
+        display: flex;
+        justify-content: center;
+        background-color: yellow;
+        color:black;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>Delete Username from customers </h1>
+    </div>
+    <div class="maindiv2">
+    <form method="post" action="/Delete" >
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" placeholder="Input username here"/>
+      <br/></br/>
+      <input type="submit"  value="Delete Data"/>
+    </form>
+  </div>
+
+  </body>
+</html>

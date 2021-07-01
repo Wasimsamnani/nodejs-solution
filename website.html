@@ -1,0 +1,232 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+<script>
+	var obj=angular.module("myapp",[ ]);
+	obj.controller("myctrl",function($scope){
+	
+	});
+</script>
+<style>
+.button {
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 15px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+border-radius: 19px;
+border: 2px solid white;
+transition-duration: 0.10s;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.button:hover {
+  background-color:red; 
+  color: white;
+}
+.img{
+border-radius: 15px 50px;
+  background: #73AD21;
+  padding: 20px;
+  width: 1800px;
+  height: 200px;
+}
+.color
+{
+background-color: rgba(255, 0, 0, 0.3); 
+}
+.c
+ {background-color: rgba(0, 255, 0, 0.3);
+
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  resize: both;
+  overflow: auto
+}
+.ts
+{
+color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.img1{
+  border-radius: 50%;
+}
+
+</style>
+</head>
+<body ng-app="myapp" ng-controller="myctrl" class="color">
+<img src="D:\ANGULARJS\script\10.jpg" width=100% class="img"><br>
+<input type="button"   ng-click="info='HOME'" value=HOME class="button">
+<input type="button" ng-click="info='ABOUT US'" value=ABOUT US class="button">
+<input type="button" ng-click="info='COURSES'" value=COURSES class="button">
+<input type="button" ng-click="info='FACULTIES'" value=FACULTIES class="button">
+<input type="button" ng-click="info='CONTACT US'" value=CONTACT US class="button">
+<div ng-switch="info">
+<div ng-switch-when="HOME" class="c">
+<h1 align=center class="ts">SAVTRIBAI PHAUL PUNE UNIVERSITY</h1>
+<table border=0>
+<tr><th></th><th></th><th></th><th></th></tr>
+<tr>
+<td>
+<ul>
+<li>admission
+<li>exam
+<li>Finance & Accounts
+<li>Administration
+<li>Research
+</ul>
+</td>
+<td>
+<ul>
+<li>Syllabi
+<li>Scholarships
+<li>Sports Section
+<li> Certificate Section
+<li> Library
+</ul>
+</td>
+ <td>
+<ul>
+<li>SET Examination
+<li>Academic Calendar
+<li> E-Content Learning
+<li>Tenders
+<li> Circulars
+</ul>
+</td>
+<td>
+<ul>
+ <li>Job Openings
+<li>Vidyavani
+<li> NSS
+<li>International Centre
+<li> Students' Development
+</ul>
+</td>
+</tr>
+</table>
+<table><h1>IMPORTANT NEWS</h1>
+<tr><th></th></tr>
+<tr>
+<td class="ts">
+Online / offline examination query registration form
+(to be filled up by registered student)
+अंतिम वर्ष व बॅकलॉग परीक्षा समस्या नोंदणी अर्ज (दि. १२ ऑक्टोबर २०२० पासून सुरु झालेल्या परीक्षांसाठी )
+"Revised Timetable for 12th October 2020 Exams"
+(दिनांक १२ ऑक्टोबर 2020 च्या परीक्षा वेळापत्रकतील बदल)
+Subjectwise Sample Question Bank (नमुना प्रश्नसंच): https://sqb.unipune.ac.in
+SPPU Online Final Sem/Year Training Document : Click Here
+Username/Password & other instructions : Click Here
+Examination Time Table : Click Here
+If Students/College have any queries regarding online/offline Examination then click here
+</td>
+</tr>
+</table>
+<p>
+"The Governor as Chancellor plays a very constructive role in the administration of the Universities. The Chancellor being the Governor can help to insulate the Universities from unnecessary governmental interference and safeguard their autonomy."
+<img src="D:\ANGULARJS\script\Chancellor.jpg" class="img1">
+</p>
+<p>
+The higher education challenge for SPPU is threefold, namely expansion, inclusion and excellence - Expansion to serve the exponential demand, Inclusion for equity and access to all without compromising Excellence at par. The University therefore shall strive hard
+</p>
+<img src="D:\ANGULARJS\script\vcsir.jpg" class="img1">
+</div>	
+<div ng-switch-when="ABOUT US" class="c">
+
+<table border=0>
+<tr><th></th></tr>
+<tr>
+<td>
+<ul>
+
+<li>About University
+<li>About University
+<li>History
+<li>Mission
+<li>From VC's Desk
+<li>A Snapshot
+<li>TheUniversityEmblem
+<li>Chairs
+
+<li>Management Council
+<li>Academic Council
+<li>Senate
+<li>Deans of Faculties
+<li>University Campus
+<li>About Campus
+<li>Campus Map
+<li>Utility Buildings
+<li>Student Support Facilities 	 
+
+<li>	How to Reach University?
+<li>	Map of Campus
+<li>	Contact Information
+</ul>
+</td>
+</tr>
+</table>
+</div>	
+<div ng-switch-when="COURSES" class="c">
+<p>
+<center>
+<pre>
+The prospectus and admission forms are available in the college website.
+F.Y. B.A, B.Com. and B.Sc (Computer Science / Physics / Chemistry / Electronics / Mathematics), BBA (Computer Application), BBA, BBA (International Business)
+Candidates who have passed Higher Secondary Examination (HSC) of Maharashtra State or any other Examination recognized as equivalent thereto shall be eligible for admission to the above degree programmes.
+</p>
+For Syllabus, refer to the Prospectus.
+						Apply Online
+<p>
+S.Y. B.A, B.Com. and B.Sc (Computer Science / Physics / Chemistry / Electronics / Mathematics), BBA (Computer Application), BBA, BBA (International Business)
+Admissions for the Academic Year 2019-2020 Courses are now Open.
+
+Eligible Students who have completed their First Year in the courses offered, are to contact the Admissions Office.
+
+For Syllabus, refer to the Prospectus.
+
+						Apply Online
+</p>						
+<p>
+T.Y. B.A, B.Com. and B.Sc (Computer Science / Physics / Chemistry / Electronics / Mathematics), BBA (Computer Application), BBA, BBA (International Business)
+Admission for the Academic Year 2019-2020 to Third Year Courses will commence after the declaration of the Second Year results by the University.
+
+Eligible Students who have completed their Second Year in the courses offered, are to contact the Admissions Office.
+
+For Syllabus, refer to the Prospectus.
+
+						Apply Online
+
+
+</p>
+</pre>
+</center>
+
+</div>
+<div ng-switch-when="FACULTIES" class="c">
+<ul>
+<h1>Names of Faculties <h1/>
+<li>mr yadav
+<li>mr sharma
+<li>miss sharma
+<li>mr oza
+<li>miss lili
+</ul>
+</div>
+<div ng-switch-when="CONTACT US" class="c">
+<center>
+<p>
+26/4 A, Vadgaon Sheri, Off Pune Nagar RoadPuneMaharashtra411014
+</p>
+<p>
+info@christcollegepune.org
+</p>
+<p>
++91 9823888322
+</p>
+<center>
+</div>
+</div>
+</body>
+</html>

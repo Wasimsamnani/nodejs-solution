@@ -1,0 +1,54 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script>
+		var obj=angular.module("myapp",[ ]);
+		 obj.controller("myctrl",function($scope){
+			  $scope.submithandeler = function () {
+				 $scope.rollno = $scope.r;
+				 $scope.name = 	$scope.n;
+				 $scope.address = $scope.a;
+				 $scope.course = $scope.co;
+				 $scope.contact = $scope.c;
+				 $scope.gender = $scope.g;
+				 $scope.email= $scope.e;
+			 }
+});
+</script>
+</head>
+<body ng-app=myapp ng-controller=myctrl>
+<center>
+<div><h1>BUS TICKETS RESERVETION FORM</h1></div>
+<div>
+<form action="/Store" method="post">
+ROLL NO
+<input type=number  id="rollno" name="rollno" ng-model="r"/><br/><br/>
+NAME
+<input type=text name="name" id="name" ng-model="n"/><br/><br/>
+ADDRESS
+<input type=text name="address" id="address" ng-model="a"/><br/><br/>
+COURSES
+<input type=text name="course" id="course" ng-model="co"/><br/><br/>
+CONTACT NUMBER
+<input type=number name="mobilenumber" id="mobilenumber" ng-model="c"/><br/><br/>
+GENDER
+<input type="text" name="gender" id="gender" ng-model="g"/><br/><br/>
+EMAIL
+<input type="text" name="email" id="email" ng-model="e"/><br/><br/>
+<input type="button" value="show details" ng-click = "submithandeler()" /><br/><br/>
+<input type="submit"  value="submit it">
+</form>
+</div>
+<div>
+<h1>E-DISPLAY </h1>
+ROLLNO:{{rollno}}<br/>
+NAME:{{name}}<br/>
+ADDRESS:{{address}}<br/>
+COURSE :{{course}}<br/>
+CONTACT:{{contact}}<br/>
+GENDER:{{gender}}<br/>
+EMAIL:{{email}}<br/>
+</div>
+</center>
+</body>
+</html>
