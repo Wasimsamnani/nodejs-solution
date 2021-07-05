@@ -3,7 +3,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script>
 		var obj=angular.module("myapp",[ ]);
-		 obj.controller("myctrl",function($scope){
+		 obj.controller("myctrl",function($scope,$http){
 			  $scope.submithandeler = function () {
 				 $scope.rollno = $scope.r;
 				 $scope.name = 	$scope.n;
@@ -13,14 +13,19 @@
 				 $scope.gender = $scope.g;
 				 $scope.email= $scope.e;
 			 }
-});
+			 $http.post('localhost:8080',"wasim");
+			 $http.get('http://localhost:8080/details').then(function(response) {
+     $scope.data = response.data.records;
+   });
+	});
+
 </script>
 </head>
 <body ng-app=myapp ng-controller=myctrl>
 <center>
-<div><h1>BUS TICKETS RESERVETION FORM</h1></div>
+<div><h1>store your data into database<h1></div>
 <div>
-<form action="/Store" method="post">
+<form action="/" method="post">
 ROLL NO
 <input type=number  id="rollno" name="rollno" ng-model="r"/><br/><br/>
 NAME
@@ -40,14 +45,28 @@ EMAIL
 </form>
 </div>
 <div>
-<h1>E-DISPLAY </h1>
-ROLLNO:{{rollno}}<br/>
-NAME:{{name}}<br/>
-ADDRESS:{{address}}<br/>
-COURSE :{{course}}<br/>
-CONTACT:{{contact}}<br/>
-GENDER:{{gender}}<br/>
-EMAIL:{{email}}<br/>
+	<h1>showing all fields of database</h1>
+<table border="1">
+	<tr>
+		<th>ROLLNO</th>
+		<th>NAME</th>
+		<th>ADDRESS</th>
+		<th>COURSE</th>
+		<th>CONTACT</th>
+		<th>GENDER</th>
+		<th>EMAIL</th>
+	</tr>
+	<tr>
+		<td>{{rollno}}</td>
+		<td>{{name}}</td>
+		<td>{{address}}</td>
+		<td>{{course}}</td>
+		<td>{{contact}}</td>
+		<td>{{gender}}</td>
+		<td>{{email}}</td>
+		{{data}}
+	</tr>
+</table>
 </div>
 </center>
 </body>
